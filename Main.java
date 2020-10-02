@@ -1,15 +1,28 @@
+import java.util.Scanner;
 /**
- *
- * @author 
+ * Asks user to enter postive int to continue and a negative int to end
+ * @author Thomas Quigley
  */
 public class Main {
 
-  /**
-   * The method that is executed when you hit the run button.
-   * @param args the command line arguments
-   */
   public static void main(String[] args) {
-    // TODO code application logic here
+    Scanner input = new Scanner(System.in);
+    //declare users number
+    int userNumber;
+
+    do {
+      // ask the user for a number
+      System.out.println("Please enter a positive integer. Enter a negative integer to quit.");
+      userNumber = input.nextInt();
+
+      // if number is negative end, if not continue
+    } while (userNumber >= 0);
+   
+    // tell the user the program is done
+    System.out.println("All done!");
+    
+
+    
     
   }
 }
